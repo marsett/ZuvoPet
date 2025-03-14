@@ -449,6 +449,8 @@ namespace ZuvoPet.Repositories
 
         public async Task<Usuario> LogInUserAsync(string nombreUsuario, string contrasena)
         {
+            // Simples excepciones de Usuarios creados a mano en SQL Server
+            // Puesto que no se puede crear un salt inventado
             // Excepción para usuario mario
             if (nombreUsuario == "mario" && contrasena == "contrasenamario")
             {
